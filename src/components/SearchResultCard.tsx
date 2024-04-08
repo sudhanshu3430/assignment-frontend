@@ -1,24 +1,15 @@
-import axios from 'axios';
+
 import { User } from '../types';
 
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 type Props ={
     userData: User[];
 }
 
 const SearchCard = ({ userData }: Props) => {
-  const addToTeam = async (userData: User) => {
-    try {
-      await axios.post(`${API_BASE_URL}/api/team`, userData);
-      // Optionally, you can handle success messages or update the UI accordingly
-      console.log('User added to team successfully!');
-    } catch (error) {
-      console.error('Error adding user to team:', error);
-      // Optionally, you can handle error messages
-    }
-  };
+  
   
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mx-auto max-w-screen-lg">
@@ -39,7 +30,7 @@ const SearchCard = ({ userData }: Props) => {
             </div>
           </div>
           <div className="mt-4">
-            <button className="btn bg-green-500 text-white rounded-full mr-2 px-4 py-2" onClick={() => addToTeam(user)}>Add to Team</button>
+            <button className="btn bg-green-500 text-white rounded-full mr-2 px-4 py-2" >Add to Team</button>
 
           </div>
         </div>
