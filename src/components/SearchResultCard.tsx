@@ -30,7 +30,7 @@ const SearchCard = ({ userData }: Props) => {
             </div>
           </div>
           <div className="mt-4">
-            <button className="btn bg-green-500 text-white rounded-full mr-2 px-4 py-2" >Add to Team</button>
+            
 
           </div>
         </div>
